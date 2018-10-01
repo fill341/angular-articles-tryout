@@ -1,5 +1,5 @@
 <mat-grid-list [cols]="2" rowHeight="2:1">
-  <mat-grid-tile *ngFor="let post of list" class="tile__item">
+  <mat-grid-tile *ngFor="let post of list" class="tile__item" (click)="addPost(post)">
     {{post.title}} -
     {{post.briefly}}
   </mat-grid-tile>

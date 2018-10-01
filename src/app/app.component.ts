@@ -13,12 +13,18 @@ export class AppComponent {
   private posts;
 
   constructor (private postsService: PostsService) {
-    this.postsService.getLastPosts().subscribe((data: Post) => {
-      this.posts = data;
+    this.postsService.getLastPosts().subscribe((posts: Post) => {
+      this.posts = posts;
     });
   }
 
   get list(): Post[] {
     return this.posts;
+  }
+
+  addPost(post: Post) {
+    this.postsService.addPost(post).subscribe((item: Post) => {
+      this.posts.push(item);
+    });
   }
 }
