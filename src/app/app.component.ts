@@ -10,9 +10,15 @@ import {Post} from './models/post';
 })
 export class AppComponent {
 
-  constructor (private postsService: PostsService) {}
+  private posts;
+
+  constructor (private postsService: PostsService) {
+    this.postsService.getLastPosts().subscribe((data: Post) => {
+      this.posts = data;
+    });
+  }
 
   get list(): Post[] {
-    return this.postsService.getLastPosts();
+    return this.posts;
   }
 }

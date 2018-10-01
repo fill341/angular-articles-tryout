@@ -1,3 +1,7 @@
-<mat-card *ngFor="let post of list">
-  {{post.title}} -
-</mat-card>
+<mat-grid-list [cols]="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let post of list" class="tile__item">
+    {{post.title}} -
+    {{post.briefly}}
+  </mat-grid-tile>
+</mat-grid-list>
+
