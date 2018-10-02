@@ -1,3 +1,7 @@
 .tile__item {
-  background-color: beige;
+  background-color: #ededed;
+}
+
+.articles__container {
+  height: 100%;
 }

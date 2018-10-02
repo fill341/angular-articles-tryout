@@ -1,7 +1,28 @@
-<mat-grid-list [cols]="2" rowHeight="2:1">
-  <mat-grid-tile *ngFor="let post of list" class="tile__item" (click)="addPost(post)">
-    {{post.title}} -
-    {{post.briefly}}
-  </mat-grid-tile>
-</mat-grid-list>
+<mat-drawer-container class="articles__container">
+  <mat-drawer #drawer mode="push">
+    <mat-list>
+      <mat-list-item>My Articles App</mat-list-item>
+      <mat-list-item>
+        <button mat-button (click)="openDialog()">Add article</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button>Sign out</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-toolbar>
+    <span (click)="drawer.toggle()">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </span>
+  </mat-toolbar>
+  <!--<mat-card>-->
+    <mat-grid-list [cols]="4" rowHeight="1:1" gutterSize="5em">
+      <mat-grid-tile *ngFor="let post of list" class="tile__item" (click)="addPost(post)">
+        <mat-grid-tile-header>{{post.title}}</mat-grid-tile-header>
+        <img mat-card-image src="https://avatars3.githubusercontent.com/u/6615628?s=400&v=4"/>
+        <mat-grid-tile-footer>{{post.briefly}}</mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  <!--</mat-card>-->
+</mat-drawer-container>
 
