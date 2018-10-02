@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddArticleDialogComponent } from './forms/add-article-dialog/add-article-dialog.component';
 import { ConfirmDialogComponent } from './forms/confirm-dialog/confirm-dialog.component';
 import { ArticleGridComponent } from './components/article-grid/article-grid.component';
+import { GridCellComponent } from './components/grid-cell/grid-cell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddArticleDialogComponent,
     ConfirmDialogComponent,
-    ArticleGridComponent
+    ArticleGridComponent,
+    GridCellComponent
   ],
   entryComponents: [
     AddArticleDialogComponent,

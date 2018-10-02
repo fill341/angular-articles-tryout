@@ -32,7 +32,7 @@ export class AppComponent {
   addPost(post: Article) {
     this.articleService.createArticle(post).subscribe((item: Article) => {
       this.articleService.createArticle(item);
-      this.articleGrid.updateArticles();
+      this.articleGrid.loadArticles();
     });
   }
 }
