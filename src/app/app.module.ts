@@ -19,7 +19,8 @@ import { ConfirmDialogComponent } from './forms/confirm-dialog/confirm-dialog.co
     ConfirmDialogComponent
   ],
   entryComponents: [
-    AddArticleDialogComponent
+    AddArticleDialogComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, BrowserAnimationsModule, ReactiveFormsModule,

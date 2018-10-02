@@ -20,7 +20,6 @@ export class AddArticleDialogComponent {
   }
 
   handleCreateClick(): void {
-    console.log(this.articleForm);
     this.dialogRef.close(this.articleForm.value);
   }
 }

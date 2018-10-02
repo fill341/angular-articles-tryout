@@ -2,6 +2,10 @@
   background-color: #ededed;
 }
 
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
 .articles__container {
   height: 100%;
 }
