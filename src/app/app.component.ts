@@ -3,13 +3,11 @@ import {ArticleService} from './services/article.service';
 import {Article} from './models/article';
 import {MatDialog} from '@angular/material';
 import {AddArticleDialogComponent} from './forms/add-article-dialog/add-article-dialog.component';
-import {ConfirmDialogComponent} from './forms/confirm-dialog/confirm-dialog.component';
 import {ArticleGridComponent} from './components/article-grid/article-grid.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   providers: [ArticleService]
 })
 export class AppComponent {
