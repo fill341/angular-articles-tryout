@@ -1,0 +1,8 @@
+.add-article-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-article-container > * {
+  width: 100%;
+}

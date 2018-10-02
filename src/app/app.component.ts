@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {ArticleService} from './services/article.service';
 import {Article} from './models/article';
 import {MatDialog} from '@angular/material';
-import {AddArticleModalDialogComponent} from './forms/add-article-modal-dialog/add-article-modal-dialog.component';
+import {AddArticleDialogComponent} from './forms/add-article-dialog/add-article-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -20,13 +20,13 @@ export class AppComponent {
     });
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(AddArticleModalDialogComponent, {
-      width: '250px',
+    const dialogRef = this.dialog.open(AddArticleDialogComponent, {
+      width: '50%',
       data: {}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log(result);
     });
   }
 
