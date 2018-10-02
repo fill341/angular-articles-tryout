@@ -8,15 +8,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { AddArticleModalDialog } from './forms/add-article-modal-dialog/add-article-modal-dialog.component';
+import { AddArticleModalDialogComponent } from './forms/add-article-modal-dialog/add-article-modal-dialog.component';
+import { ConfirmDialogComponent } from './forms/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddArticleModalDialog
+    AddArticleModalDialogComponent,
+    ConfirmDialogComponent
   ],
   entryComponents: [
-    AddArticleModalDialog
+    AddArticleModalDialogComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, BrowserAnimationsModule,
