@@ -15,7 +15,8 @@ export class AddArticleDialogComponent {
     this.articleForm = formBuilder.group({
       'title': ['', Validators.compose([Validators.required])],
       'briefly': ['', Validators.compose([Validators.required])],
-      'description': ['', Validators.compose([Validators.required])]
+      'description': ['', Validators.compose([Validators.required])],
+      'releaseDate': [new Date(), Validators.compose([Validators.required])]
     });
   }
 

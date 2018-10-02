@@ -5,6 +5,11 @@
       <input matInput placeholder="Title" formControlName="title">
     </mat-form-field>
     <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="releaseDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
       <input matInput placeholder="Briefly" formControlName="briefly">
     </mat-form-field>
     <mat-form-field>
